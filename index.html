@@ -14,110 +14,152 @@
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="logo">Nekopara</div>
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <form id="searchForm" onsubmit="searchPosts(event)" style="display: flex; align-items: center;">
-        <input type="text" id="searchInput" placeholder="Cari..." style="padding: 3px 5px; border-radius: 2px 0 0 2px; border: 1px solid #ccc; font-size: 14px;">
-        <button type="submit" style="padding: 6px 10px; border: none; background: #007bff; color: #fff; border-radius: 0 4px 4px 0; cursor: pointer;">
-          <i class="fas fa-search"></i>
-        </button>
-      </form>
-      <button id="refreshBtn" onclick="manualRefresh()" style="padding: 8px 12px; font-size: 14px; border: none; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer;">
-        <i class="fas fa-sync-alt"></i>
+<nav class="navbar">
+  <div class="logo">Nekopara</div>
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <form id="searchForm" onsubmit="searchPosts(event)" style="display: flex; align-items: center;">
+      <input type="text" id="searchInput" placeholder="Cari..." style="padding: 3px 5px; border-radius: 2px 0 0 2px; border: 1px solid #ccc; font-size: 14px;">
+      <button type="submit" style="padding: 6px 10px; border: none; background: #007bff; color: #fff; border-radius: 0 4px 4px 0; cursor: pointer;">
+        <i class="fas fa-search"></i>
       </button>
-      <button id="clearCacheBtn" onclick="clearServiceWorkerCache()" style="padding: 8px 12px; font-size: 14px; border: none; background-color: #dc3545; color: white; border-radius: 5px; cursor: pointer;">
-        <i class="fas fa-trash-alt"></i>
-      </button>
-      <button class="img/hamburger" onclick="toggleMenu()">
-        <img src="img/hamburger_menu.svg" alt="Menu" width="30">
-      </button>
-    </div>
-    <ul class="nav-menu" id="navMenu">
-      <button class="close-menu" onclick="toggleMenu()">
-        <img src="img/close_icon.svg" alt="Close" width="30">
-      </button>
-      <li><a href="#beranda" onclick="filterPosts('all')">Halaman utama</a></li>
-      <li><a href="#local" onclick="filterPosts('local')">Bokep local</a></li>
-      <li><a href="#asia" onclick="filterPosts('asia')">Bokep asia</a></li>
-      <li><a href="#barat" onclick="filterPosts('barat')">Bokep barat</a></li>
-      <li><a href="#local_random" onclick="filterPosts('local_random')">Bokep Random local</a></li>
-      <li><a href="#asia_random" onclick="filterPosts('asia_random')">Bokep Random asia</a></li>
-      <li><a href="#barat_random" onclick="filterPosts('barat_random')">Bokep Random Barat</a></li>
-      <li><a href="#jav" onclick="filterPosts('jav')">JAV Sub indo</a></li>
-    </ul>
-  </nav>
-
-  <main class="grid-container" id="postGrid"></main>
-
-  <div class="pagination">
-    <button id="prevBtn" onclick="prevPage()"><i class="fas fa-arrow-left"></i> Previous</button>
-    <button id="nextBtn" onclick="nextPage()">Next <i class="fas fa-arrow-right"></i></button>
+    </form>
+    <button id="refreshBtn" onclick="manualRefresh()" style="padding: 8px 12px; font-size: 14px; border: none; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer;">
+      <i class="fas fa-sync-alt"></i>
+    </button>
+    <button id="clearCacheBtn" onclick="clearServiceWorkerCache()" style="padding: 8px 12px; font-size: 14px; border: none; background-color: #dc3545; color: white; border-radius: 5px; cursor: pointer;">
+      <i class="fas fa-trash-alt"></i>
+    </button>
+    <button class="img/hamburger" onclick="toggleMenu()">
+      <img src="img/hamburger_menu.svg" alt="Menu" width="30">
+    </button>
   </div>
+  <ul class="nav-menu" id="navMenu">
+    <button class="close-menu" onclick="toggleMenu()">
+      <img src="img/close_icon.svg" alt="Close" width="30">
+    </button>
+    <li><a href="#beranda" onclick="filterPosts('all')">Halaman utama</a></li>
+    <li><a href="#local" onclick="filterPosts('local')">Bokep local</a></li>
+    <li><a href="#asia" onclick="filterPosts('asia')">Bokep asia</a></li>
+    <li><a href="#barat" onclick="filterPosts('barat')">Bokep barat</a></li>
+    <li><a href="#local_random" onclick="filterPosts('local_random')">Bokep Random local</a></li>
+    <li><a href="#asia_random" onclick="filterPosts('asia_random')">Bokep Random asia</a></li>
+    <li><a href="#barat_random" onclick="filterPosts('barat_random')">Bokep Random Barat</a></li>
+    <li><a href="#jav" onclick="filterPosts('jav')">JAV Sub indo</a></li>
+  </ul>
+</nav>
 
-  <div id="overlay" class="overlay" onclick="closeOverlay(event)">
-    <div class="overlay-content" id="overlayContent"></div>
-    <button class="close-btn" onclick="closeOverlay(event)">Tutup</button>
-  </div>
+<main class="grid-container" id="postGrid"></main>
 
-  <footer class="site-footer">
-    <p>
-      Hak cipta Nekopara. Di larang mengambil content tanpa izin.
-      content dewasa pastikan jauhkan dari anak-anak
-    </p>
-  </footer>
+<div class="pagination">
+  <button id="prevBtn" onclick="prevPage()"><i class="fas fa-arrow-left"></i> Previous</button>
+  <button id="nextBtn" onclick="nextPage()">Next <i class="fas fa-arrow-right"></i></button>
+</div>
 
-  <script>
-    // 🔹 Ambil daftar file dari index.json (posisi di root)
-    fetch("index.json")
-      .then(res => res.json())
-      .then(data => {
-        const postGrid = document.getElementById("postGrid");
+<div id="overlay" class="overlay" onclick="closeOverlay(event)">
+  <div class="overlay-content" id="overlayContent"></div>
+  <button class="close-btn" onclick="closeOverlay(event)">Tutup</button>
+</div>
 
-        data.files.forEach(item => {
-          const filePath = "data/" + item.file;
+<footer class="site-footer">
+  <p>
+    Hak cipta Nekopara. Di larang mengambil content tanpa izin.
+    content dewasa pastikan jauhkan dari anak-anak
+  </p>
+</footer>
 
-          const div = document.createElement("div");
-          div.classList.add("card");
-          div.innerHTML = `
-            <h3>${item.file}</h3>
-            <a href="${filePath}" target="_blank">Lihat file</a>
-          `;
-          postGrid.appendChild(div);
-        });
-      })
-      .catch(err => console.error("Gagal membaca index.json:", err));
+<script src="js/script.js"></script>
+<script>
+  // 🔹 Fetch index.json dari luar folder data
+  fetch("index.json")
+    .then(res => res.json())
+    .then(data => {
+      window.allPosts = data.files; // simpan semua file global
+      currentPage = 1;
+      postsPerPage = 10;
+      displayPage(currentPage);
+    })
+    .catch(err => console.error("Gagal membaca index.json:", err));
 
-    // 🔹 Fungsi pencarian
-    function searchPosts(event) {
-      event.preventDefault();
-      const query = document.getElementById('searchInput').value.trim().toLowerCase();
-      alert("Fitur pencarian masih dummy. Query: " + query);
+  // 🔹 Fungsi untuk menampilkan file di grid
+  let currentPage = 1;
+  let postsPerPage = 10;
+
+  function displayPage(page) {
+    const grid = document.getElementById("postGrid");
+    grid.innerHTML = "";
+
+    const start = (page - 1) * postsPerPage;
+    const end = start + postsPerPage;
+    const pagePosts = window.allPosts.slice(start, end);
+
+    pagePosts.forEach(item => {
+      const filePath = "data/" + item.file;
+      const div = document.createElement("div");
+      div.classList.add("card");
+      div.innerHTML = `
+        <h3>${item.file}</h3>
+        <button onclick="showOverlay('${filePath}')">Lihat</button>
+      `;
+      grid.appendChild(div);
+    });
+  }
+
+  function nextPage() {
+    if (currentPage * postsPerPage < window.allPosts.length) {
+      currentPage++;
+      displayPage(currentPage);
     }
+  }
 
-    // 🔹 Reload manual
-    function manualRefresh() {
-      location.reload();
+  function prevPage() {
+    if (currentPage > 1) {
+      currentPage--;
+      displayPage(currentPage);
     }
+  }
 
-    // 🔹 Clear cache service worker
-    function clearServiceWorkerCache() {
-      if ('caches' in window) {
-        caches.keys().then(names => {
-          for (let name of names) {
-            caches.delete(name);
-          }
-        }).then(() => {
-          alert('Cache berhasil dibersihkan. Halaman akan dimuat ulang.');
-          location.reload(true);
-        });
-      }
-    }
+  function showOverlay(filePath) {
+    const overlay = document.getElementById("overlay");
+    const content = document.getElementById("overlayContent");
+    overlay.style.display = "flex";
+    fetch(filePath)
+      .then(res => res.text())
+      .then(txt => {
+        content.innerHTML = `<pre>${txt}</pre>`;
+      });
+  }
 
-    // 🔹 Toggle menu
-    function toggleMenu() {
-      document.getElementById("navMenu").classList.toggle("active");
+  function closeOverlay(event) {
+    if (event.target.id === "overlay" || event.target.classList.contains("close-btn")) {
+      document.getElementById("overlay").style.display = "none";
     }
-  </script>
+  }
+
+  // 🔹 Search
+  function searchPosts(event) {
+    event.preventDefault();
+    const query = document.getElementById("searchInput").value.trim().toLowerCase();
+    window.allPosts = window.allPosts.filter(item => item.file.toLowerCase().includes(query));
+    currentPage = 1;
+    displayPage(currentPage);
+  }
+
+  // 🔹 Manual reload
+  function manualRefresh() { location.reload(); }
+
+  // 🔹 Clear cache SW
+  function clearServiceWorkerCache() {
+    if ("caches" in window) {
+      caches.keys().then(names => {
+        for (let name of names) caches.delete(name);
+      }).then(() => {
+        alert("Cache berhasil dibersihkan. Halaman akan dimuat ulang.");
+        location.reload(true);
+      });
+    }
+  }
+
+  function toggleMenu() { document.getElementById("navMenu").classList.toggle("active"); }
+</script>
 </body>
 </html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Safelink Redirect</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    #countdown {
+      font-size: 20px;
+      font-weight: bold;
+      color: red;
+    }
+    #continue {
+      display: none;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    .ads-container {
+      margin: 20px 0;
+    }
+    .instructions {
+      background-color: #f0f0f0;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-left: 5px solid #2196F3;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Harap Tunggu...</h2>
+
+  <div class="instructions">
+    <p><strong>Cara lewati iklan:</strong></p>
+    <p>Jika terkena iklan, tekan tombol <strong>kembali (back)</strong> saja.</p>
+    <p>Iklan biasanya muncul <strong>2 kali</strong>, setelah itu tunggu sebentar, halaman akan otomatis menuju ke <strong>VIDEY</strong>.</p>
+  </div>
+
+  <!-- Iklan Atas -->
+  <div class="ads-container">
+    <script type='text/javascript' src='//pl26230795.effectiveratecpm.com/7c/ba/8f/7cba8f9c438d27103851dca0a6135216.js'></script>
+  </div>
+
+  <p>Anda akan dialihkan dalam <span id="countdown">5</span> detik.</p>
+
+  <!-- Iklan Tengah -->
+  <div class="ads-container">
+    <script src="https://www.effectiveratecpm.com/z6tm9azca?key=caa878184bec227aac28556e38c42760" async data-cfasync="false"></script>
+  </div>
+
+  <!-- Iklan Bawah -->
+  <div class="ads-container">
+    <script type='text/javascript' src='//pl26230795.effectiveratecpm.com/7c/ba/8f/7cba8f9c438d27103851dca0a6135216.js'></script>
+  </div>
+
+  <button id="continue">Lanjutkan</button>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const targetURL = params.get("url") || "https://videy.co";
+
+    let countdown = 5;
+    let countdownInterval = setInterval(function () {
+      countdown--;
+      document.getElementById("countdown").innerText = countdown;
+      if (countdown === 0) {
+        clearInterval(countdownInterval);
+        document.getElementById("continue").style.display = "inline-block";
+      }
+    }, 1000);
+
+    document.getElementById("continue").addEventListener("click", function () {
+      // ✅ 1. Buka Direct Link (Adsterra)
+      window.open("https://www.effectiveratecpm.com/z6tm9azca?key=caa878184bec227aac28556e38c42760", "_blank");
+
+      // ✅ 2. Load Popunder JuicyAds
+      const juicy = document.createElement("script");
+      juicy.type = "text/javascript";
+      juicy.src = "https://js.juicyads.com/jp.php?c=4464u233x2a4u4r2o2e4y25424&u=https%3A%2F%2Fwww.juicyads.rocks";
+      document.body.appendChild(juicy);
+
+      // ✅ 3. Redirect ke tujuan setelah 3 detik
+      setTimeout(function () {
+        window.location.href = targetURL;
+      }, 3000);
+    });
+  </script>
+
+  <!-- Popunder tambahan dari Adsterra -->
+  <script src="https://fpyf8.com/88/tag.min.js" data-zone="157336" async data-cfasync="false"></script>
+
+</body>
+</html>

@@ -13,7 +13,7 @@ function decodeUrl(encodedUrl) {
     const hostname = url.hostname;
     const targetDomains = ['videy.co', 'mediafire', 'terabox'];
     const isTarget = targetDomains.some(domain => hostname.includes(domain));
-    return isTarget ? `https://cupapih.github.io/savelink-nikepoi3/?url=${encodedUrl}` : decoded;
+    return isTarget ? `https://nekopara-savelink.netlify.app/?url=${encodedUrl}` : decoded;
   } catch (e) {
     console.error("Gagal decode:", encodedUrl);
     return "#";

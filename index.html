@@ -1,4 +1,6 @@
-<html lang="id"><head>
+<!DOCTYPE html>
+<html lang="id">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nekopara</title>
@@ -10,46 +12,41 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
-<script>(s=>{s.dataset.zone='9713245',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-
- <meta name="monetag" content="38a78bf492cffb6e157e9a6a21b0da44">
-  
 <body>
 
   <nav class="navbar">
-  <div class="logo">Nekopara</div>
-  <div style="display: flex; align-items: center; gap: 10px;">
-    <form id="searchForm" onsubmit="searchPosts(event)" style="display: flex; align-items: center;">
-      <input type="text" id="searchInput" placeholder="Cari..." style="padding: 3px 5px; border-radius: 2px 0 0 2px; border: 1px solid #ccc; font-size: 14px;">
-      <button type="submit" style="padding: 6px 10px; border: none; background: #007bff; color: #fff; border-radius: 0 4px 4px 0; cursor: pointer;">
-        <i class="fas fa-search"></i>
+    <div class="logo">Nekopara</div>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <form id="searchForm" onsubmit="searchPosts(event)" style="display: flex; align-items: center;">
+        <input type="text" id="searchInput" placeholder="Cari..." style="padding: 3px 5px; border-radius: 2px 0 0 2px; border: 1px solid #ccc; font-size: 14px;">
+        <button type="submit" style="padding: 6px 10px; border: none; background: #007bff; color: #fff; border-radius: 0 4px 4px 0; cursor: pointer;">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <button id="refreshBtn" onclick="manualRefresh()" style="padding: 8px 12px; font-size: 14px; border: none; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer;">
+        <i class="fas fa-sync-alt"></i>
       </button>
-    </form>
-    <button id="refreshBtn" onclick="manualRefresh()" style="padding: 8px 12px; font-size: 14px; border: none; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer;">
-      <i class="fas fa-sync-alt"></i>
-    </button>
-    <button id="clearCacheBtn" onclick="clearServiceWorkerCache()" style="padding: 8px 12px; font-size: 14px; border: none; background-color: #dc3545; color: white; border-radius: 5px; cursor: pointer;">
-      <i class="fas fa-trash-alt"></i>
-    </button>
-    <button class="img/hamburger" onclick="toggleMenu()">
-      <img src="img/hamburger_menu.svg" alt="Menu" width="30">
-    </button>
-  </div>
-  <ul class="nav-menu" id="navMenu">
-    <button class="close-menu" onclick="toggleMenu()">
-      <img src="img/close_icon.svg" alt="Close" width="30">
-    </button>
-    <li><a href="#beranda" onclick="filterPosts('all')">Halaman utama</a></li>
-    <li><a href="#local" onclick="filterPosts('local')">Bokep local</a></li>
-    <li><a href="#asia" onclick="filterPosts('asia')">Bokep asia</a></li>
-    <li><a href="#barat" onclick="filterPosts('barat')">Bokep barat</a></li>
-    <li><a href="#local_random" onclick="filterPosts('local_random')">Bokep Random local</a></li>
-    <li><a href="#asia_random" onclick="filterPosts('asia_random')">Bokep Random asia</a></li>
-    <li><a href="#barat_random" onclick="filterPosts('barat_random')">Bokep Random Barat</a></li>
-    <li><a href="#jav" onclick="filterPosts('jav')">JAV Sub indo</a></li>
-  </ul>
-</nav>
+      <button id="clearCacheBtn" onclick="clearServiceWorkerCache()" style="padding: 8px 12px; font-size: 14px; border: none; background-color: #dc3545; color: white; border-radius: 5px; cursor: pointer;">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+      <button class="img/hamburger" onclick="toggleMenu()">
+        <img src="img/hamburger_menu.svg" alt="Menu" width="30">
+      </button>
+    </div>
+    <ul class="nav-menu" id="navMenu">
+      <button class="close-menu" onclick="toggleMenu()">
+        <img src="img/close_icon.svg" alt="Close" width="30">
+      </button>
+      <li><a href="#beranda" onclick="filterPosts('all')">Halaman utama</a></li>
+      <li><a href="#local" onclick="filterPosts('local')">Bokep local</a></li>
+      <li><a href="#asia" onclick="filterPosts('asia')">Bokep asia</a></li>
+      <li><a href="#barat" onclick="filterPosts('barat')">Bokep barat</a></li>
+      <li><a href="#local_random" onclick="filterPosts('local_random')">Bokep Random local</a></li>
+      <li><a href="#asia_random" onclick="filterPosts('asia_random')">Bokep Random asia</a></li>
+      <li><a href="#barat_random" onclick="filterPosts('barat_random')">Bokep Random Barat</a></li>
+      <li><a href="#jav" onclick="filterPosts('jav')">JAV Sub indo</a></li>
+    </ul>
+  </nav>
 
   <main class="grid-container" id="postGrid"></main>
 
@@ -63,18 +60,6 @@
     <button class="close-btn" onclick="closeOverlay(event)">Tutup</button>
   </div>
 
-  <div id="blur-loader" class="blur-loader" style="display: flex;">
-    <div class="spinner"></div>
-    <div class="progress-bar">
-      <div class="progress-fill" id="progressFill"></div>
-    </div>
-    <div class="progress-text" id="progressText">7%</div>
-  </div>
-
-  <div id="updateNotice" style="display:none; position:fixed; top:80px; right:20px; background:#333; color:#fff; padding:10px 20px; border-radius:8px; cursor:pointer; z-index:1000; box-shadow:0 2px 5px rgba(0,0,0,0.3);" onclick="updateContent()">
-    <i class="fas fa-bell"></i> Klik untuk cek update
-  </div>
-
   <footer class="site-footer">
     <p>
       Hak cipta Nekopara. Di larang mengambil content tanpa izin.
@@ -82,21 +67,40 @@
     </p>
   </footer>
 
-  <script src="js/script.js"></script>
   <script>
+    // 🔹 Ambil daftar file dari index.json (posisi di root)
+    fetch("index.json")
+      .then(res => res.json())
+      .then(data => {
+        const postGrid = document.getElementById("postGrid");
 
-    
+        data.files.forEach(item => {
+          const filePath = "data/" + item.file;
 
-     function searchPosts(event) {
-    event.preventDefault();
-    const query = document.getElementById('searchInput').value.trim().toLowerCase();
-    filterPosts('search', query);
-  }
+          const div = document.createElement("div");
+          div.classList.add("card");
+          div.innerHTML = `
+            <h3>${item.file}</h3>
+            <a href="${filePath}" target="_blank">Lihat file</a>
+          `;
+          postGrid.appendChild(div);
+        });
+      })
+      .catch(err => console.error("Gagal membaca index.json:", err));
 
+    // 🔹 Fungsi pencarian
+    function searchPosts(event) {
+      event.preventDefault();
+      const query = document.getElementById('searchInput').value.trim().toLowerCase();
+      alert("Fitur pencarian masih dummy. Query: " + query);
+    }
+
+    // 🔹 Reload manual
     function manualRefresh() {
       location.reload();
     }
 
+    // 🔹 Clear cache service worker
     function clearServiceWorkerCache() {
       if ('caches' in window) {
         caches.keys().then(names => {
@@ -104,30 +108,16 @@
             caches.delete(name);
           }
         }).then(() => {
-          console.log('Cache berhasil dibersihkan.');
           alert('Cache berhasil dibersihkan. Halaman akan dimuat ulang.');
           location.reload(true);
         });
       }
     }
 
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/serviceworker.js')
-        .then(reg => console.log('Service Worker terdaftar:', reg.scope))
-        .catch(err => console.error('Service Worker gagal:', err));
+    // 🔹 Toggle menu
+    function toggleMenu() {
+      document.getElementById("navMenu").classList.toggle("active");
     }
-
-    const updateWorker = new Worker('js/worker.js');
-    updateWorker.postMessage('start');
-    updateWorker.onmessage = function (e) {
-      if (e.data === 'update') {
-        document.getElementById('updateNotice').style.display = 'block';
-      }
-    };
   </script>
-
-
-  
-</body></html>
-
-
+</body>
+</html>

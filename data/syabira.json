@@ -1,0 +1,15 @@
+{
+  "id": "syabira",
+  "title": "Syabira",
+  "image": "img/syabira.jpg",
+  "genre": "local",
+  "date": "2025-07-11T08:25:03.099344Z",
+  "links": {
+    "videy": [
+      "aHR0cHM6Ly92aWRleS5jby92Lz9pZD10bXk1c2FlSg==",
+      "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1qRFJtckoxUA==",
+      "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1WUUZxdENsNw==",
+      "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1PWUE0b25LeA=="
+    ]
+  }
+}

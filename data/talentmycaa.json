@@ -1,0 +1,20 @@
+
+  {
+    "id": "talent mycaa",
+    "title": "Talent mycaa",
+    "image": "img/talentmycaa.jpg",
+    "genre": "local",
+    "date": "2025-08-19T22:52:14.613Z",
+    "links": {
+      "videy": [
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD12TzRMRThOTDE=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1LM3VuR0JHajE=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1wUGE5aTI1cTE=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1zVFdGeUVCbDE=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD03NjVkSGcwaDE="
+      ],
+      "terabox": [
+        "aHR0cHM6Ly8xMDI0dGVyYWJveC5jb20vcy8xYlBDRTlhb2pUSDIzcXpvdldYUnVCdw=="
+      ]
+    }
+  }

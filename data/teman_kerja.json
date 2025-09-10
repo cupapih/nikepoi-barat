@@ -1,0 +1,16 @@
+
+  {
+    "id": "Teman kerja",
+    "title": "Teman kerja",
+    "image": "img/Temankerja.jpg",
+    "genre": "local",
+    "date": "2025-08-12T16:06:09.366232Z",
+    "links": {
+      "videy": [
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD01UEZSaWx1NTI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1OVDEwVWZSazI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD10NVh6R250YzI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD01U2xLUEVRejI="
+      ]
+    }
+  }

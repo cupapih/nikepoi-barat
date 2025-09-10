@@ -1,0 +1,25 @@
+
+  {
+    "id": "zahrani",
+    "title": "zahrani",
+    "image": "img/zahrani.jpg",
+    "genre": "local",
+    "date": "2025-07-31T17:00:00Z",
+    "links": {
+      "videy": [
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1FSHN5YktrWDI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1oSzdIa0FCYzI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1ueEFkeUludTI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1xSG5iRmk0VDI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD0xaDkBb0NGdTI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1mTHlXQXpEODI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD13Sk5RVGdUaDI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1VNFgzYmhkbDI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD0wWVM5UDlSNjI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1TZkd6UzE3cDI="
+      ],
+      "mediafire": "aHR0cHM6Ly9lbi5zaHJpbmtlLm1lL1BMc2w=",
+      "terabox": "aHR0cHM6Ly8xMDI0dGVyYWJveC5jb20vcy8xVjdkdGtJNW56UUNyUms0eVA2MG5lUQ=="
+    }
+  }
+

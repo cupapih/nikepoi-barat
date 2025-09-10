@@ -1,0 +1,17 @@
+
+  {
+    "id": "telin",
+    "title": "telin",
+    "image": "img/telin.jpg",
+    "genre": "local",
+    "date": "2025-08-19T19:45:10.512Z",
+    "links": {
+      "videy": [
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZFRtNGpjT0xlMQ==",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZFRJT2xJc1VkMQ==",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZFlQdGhNV0l6MQ==",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD00d2F4QmJZRjE=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZEp3c1ZFWFh3MQ=="
+      ]
+    }
+  }

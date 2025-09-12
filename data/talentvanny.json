@@ -1,0 +1,18 @@
+
+  {
+    "id": "talent-vanny",
+    "title": "Talent Vanny",
+    "image": "img/talentvanny.jpg",
+    "genre": "local",
+    "date": "2025-09-06T19:40:00.000Z",
+    "links": {
+      "videy": [
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1BRHV4TGpGWjI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1UQkJOMEV3UDI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1wSWRvZjhiYTI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1aUU1xWG5zVzI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1waUpHR3JtcDI=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1zM0FLbjJnTjI="
+      ]
+    }
+  }

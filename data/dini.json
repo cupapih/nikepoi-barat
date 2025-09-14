@@ -1,0 +1,18 @@
+
+  {
+    "id": "dini",
+    "title": "Dini",
+    "image": "img/dini.jpg",
+    "genre": "local",
+    "date": "2025-09-12T21:25:00.000Z",
+    "links": {
+      "videy": [
+        "aHR0cHM6Ly92aWRleS5jby92P2lkPTJaZ3BtdE1LMQ==",
+        "aHR0cHM6Ly92aWRleS5jby92P2lkPUxVcXNvY04xMQ==",
+        "aHR0cHM6Ly92aWRleS5jby92P2lkPWhvTU1OZXB0MQ=="
+      ],
+      "mediafire": [
+        "aHR0cHM6Ly9lbi5zaHJpbmtlLm1lL0QxME9UVFU="
+      ]
+    }
+  }

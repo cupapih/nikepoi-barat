@@ -1,0 +1,17 @@
+
+  {
+    "id": "mabar",
+    "title": "Mabar",
+    "image": "img/mabar.jpg",
+    "genre": "local",
+    "date": "2025-09-12T22:35:00.000Z",
+    "links": {
+      "videy": [
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1renFSOHJGQjE=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1PdEdqcDhPbzE=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD05SFVEY2tnSDE=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1jTklnY3p2WDE=",
+        "aHR0cHM6Ly92aWRleS5jby92Lz9pZD1Zejs4bHlIVTE="
+      ]
+    }
+  }

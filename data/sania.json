@@ -1,0 +1,15 @@
+
+  {
+    "id": "sania",
+    "title": "Sania",
+    "image": "img/sania.jpg",
+    "genre": "local",
+    "date": "2025-09-12T23:59:00.000Z",
+    "links": {
+      "videy": [
+        "aHR0cHM6Ly92aWRleS5jby92P2lkPUpsVjNpNFYzMQ==",
+        "aHR0cHM6Ly92aWRleS5jby92P2lkPVI1UFBmVEpLMQ==",
+        "aHR0cHM6Ly92aWRleS5jby92P2lkPVE0NFFWTWRuMQ=="
+      ]
+    }
+  }

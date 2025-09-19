@@ -1,0 +1,17 @@
+
+  {
+    "id": "seze",
+    "title": "Seze",
+    "image": "img/seze.jpg",
+    "genre": "local",
+    "date": "2025-09-12T23:59:00.000Z",
+    "links": {
+      "videy": [
+        "aHR0cHM6Ly92aWRleS5jby92P2lkPVV1Z2twNDJGMQ==",
+        "aHR0cHM6Ly92aWRleS5jby92P2lkPXR0VzRaWHlnMQ==",
+        "aHR0cHM6Ly92aWRleS5jby92P2lkPXU3WXp3bVZCMS",
+        "aHR0cHM6Ly92aWRleS5jby92P2lkPUljWHpXa01LMQ==",
+        "aHR0cHM6Ly92aWRleS5jby92P2lkPXA1VzV6b2paMQ=="
+      ]
+    }
+  }

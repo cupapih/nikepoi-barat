@@ -1,135 +1,152 @@
-<html lang="id"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nikepoi 3 ofc</title>
-  <meta name="description" content="Bokep indonesia, bokep jepang, bokep barat, konten viral terbaru, bokep viral terbaru, bokep terbaru, bokep terlengkap tanpa vpn, bokep jepang terbaru , bokep indo terbaru, keylapoi bokep, bokep omek, bokep lesbi, bokep ngewe, ngewe viral">
-  <meta name="keywords" content="Bokep indonesia, bokep jepang, bokep barat, konten viral terbaru, bokep viral terbaru, bokep terbaru, bokep terlengkap tanpa vpn, bokep jepang terbaru , bokep indo terbaru, keylapoi bokep, bokep omek, bokep lesbi, bokep ngewe, ngewe viral">
-  <meta name="author" content="Nikepoi3">
-  <meta name="theme-color" content="#000000">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>Videy - Free and Simple Video Hosting</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: #fff; 
+        }
+        video {
+            background-color: #ffffff !important;
+        }
+        #ad-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99999;
+            cursor: pointer;
+            background: transparent;
+        }
+    </style>
 </head>
-
-<script>(s=>{s.dataset.zone='9713245',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-
- <meta name="monetag" content="38a78bf492cffb6e157e9a6a21b0da44">
-  
 <body>
 
-  <nav class="navbar">
-  <div class="logo">Nikepoi3</div>
-  <div style="display: flex; align-items: center; gap: 10px;">
-    <form id="searchForm" onsubmit="searchPosts(event)" style="display: flex; align-items: center;">
-      <input type="text" id="searchInput" placeholder="Cari..." style="padding: 3px 5px; border-radius: 2px 0 0 2px; border: 1px solid #ccc; font-size: 14px;">
-      <button type="submit" style="padding: 6px 10px; border: none; background: #007bff; color: #fff; border-radius: 0 4px 4px 0; cursor: pointer;">
-        <i class="fas fa-search"></i>
-      </button>
-    </form>
-    <button id="refreshBtn" onclick="manualRefresh()" style="padding: 8px 12px; font-size: 14px; border: none; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer;">
-      <i class="fas fa-sync-alt"></i>
-    </button>
-    <button id="clearCacheBtn" onclick="clearServiceWorkerCache()" style="padding: 8px 12px; font-size: 14px; border: none; background-color: #dc3545; color: white; border-radius: 5px; cursor: pointer;">
-      <i class="fas fa-trash-alt"></i>
-    </button>
-    <button class="img/hamburger" onclick="toggleMenu()">
-      <img src="img/hamburger_menu.svg" alt="Menu" width="30">
-    </button>
-  </div>
-  <ul class="nav-menu" id="navMenu">
-    <button class="close-menu" onclick="toggleMenu()">
-      <img src="img/close_icon.svg" alt="Close" width="30">
-    </button>
-    <li><a href="#beranda" onclick="filterPosts('all')">Halaman utama</a></li>
-    <li><a href="#local" onclick="filterPosts('local')">Bokep local</a></li>
-    <li><a href="#asia" onclick="filterPosts('asia')">Bokep asia</a></li>
-    <li><a href="#barat" onclick="filterPosts('barat')">Bokep barat</a></li>
-    <li><a href="#local_random" onclick="filterPosts('local_random')">Bokep Random local</a></li>
-    <li><a href="#asia_random" onclick="filterPosts('asia_random')">Bokep Random asia</a></li>
-    <li><a href="#barat_random" onclick="filterPosts('barat_random')">Bokep Random Barat</a></li>
-    <li><a href="#jav" onclick="filterPosts('jav')">JAV Sub indo</a></li>
-  </ul>
-</nav>
+    <div id="root" class="min-h-screen flex flex-col">
+        <header class="pt-3 pb-3 lg:pt-4 lg:pb-4">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <div class="flex items-center justify-between">
+                    <a href="/" class="flex items-center">
+                        <span class="font-semibold text-[26px] tracking-[-2px] text-gray-900">videy</span>
+                    </a>
+                    <a href="/" class="flex items-center space-x-2 px-4 py-1.5 bg-gray-900 text-white font-semibold rounded-full hover:bg-gray-800 transition-colors text-[15px]">
+                        <span>Upload</span>
+                    </a>
+                </div>
+            </div>
+        </header>
 
-  <main class="grid-container" id="postGrid"></main>
+        <main class="w-full max-w-[720px] mx-auto flex-grow px-0 md:px-4 md:mt-3">
+            <div class="w-full flex justify-center">
+                <div class="w-full" id="video-wrapper">
+                    <div class="flex items-center justify-center w-full" style="height: 250px;">
+                        <span class="text-gray-500 text-sm" id="loading-text">Memuat video...</span>
+                    </div>
+                </div>
+            </div>
 
-  <div class="pagination">
-    <button id="prevBtn" onclick="prevPage()"><i class="fas fa-arrow-left"></i> Previous</button>
-    <button id="nextBtn" onclick="nextPage()">Next <i class="fas fa-arrow-right"></i></button>
-  </div>
+            <div class="w-full flex flex-col items-center mt-4 mb-0">
+                <button onclick="shareVideo()" class="inline-flex items-center justify-center whitespace-nowrap text-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-gray-900 shadow-sm h-9 py-2 rounded-full px-6 gap-2 bg-gray-100 hover:bg-gray-200 font-semibold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share w-[18px] h-[18px]">
+                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                        <polyline points="16 6 12 2 8 6"></polyline>
+                        <line x1="12" x2="12" y1="2" y2="15"></line>
+                    </svg>
+                    Share video
+                </button>
+            </div>
+        </main>
 
-  <div id="overlay" class="overlay" onclick="closeOverlay(event)">
-    <div class="overlay-content" id="overlayContent"></div>
-    <button class="close-btn" onclick="closeOverlay(event)">Tutup</button>
-  </div>
-
-  <div id="blur-loader" class="blur-loader" style="display: flex;">
-    <div class="spinner"></div>
-    <div class="progress-bar">
-      <div class="progress-fill" id="progressFill"></div>
+        <footer class="pb-6 mt-10">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <div class="flex items-center justify-center space-x-8">
+                    <a href="#" class="text-xs text-gray-500 hover:text-gray-900 transition-colors">Terms of Service</a>
+                    <a href="#" class="text-xs text-gray-500 hover:text-gray-900 transition-colors">Report Abuse</a>
+                </div>
+            </div>
+        </footer>
     </div>
-    <div class="progress-text" id="progressText">7%</div>
-  </div>
 
-  <div id="updateNotice" style="display:none; position:fixed; top:80px; right:20px; background:#333; color:#fff; padding:10px 20px; border-radius:8px; cursor:pointer; z-index:1000; box-shadow:0 2px 5px rgba(0,0,0,0.3);" onclick="updateContent()">
-    <i class="fas fa-bell"></i> Klik untuk cek update
-  </div>
+    <script>
+        window.onload = function() {
+            const wrapper = document.getElementById('video-wrapper');
+            const params = new URLSearchParams(window.location.search);
+            const videoId = params.get('id');
 
-  <footer class="site-footer">
-    <p>
-      Hak cipta Nikepoi3 OFC. Di larang mengambil content tanpa izin.
-      content dewasa pastikan jauhkan dari anak-anak
-    </p>
-  </footer>
+            if (videoId) {
+                const videoUrl = `https://cdn.videy.co/${videoId}.mp4`;
+                wrapper.innerHTML = `
+                    <video 
+                        class="w-full md:rounded-[8px]" 
+                        style="max-height: 520px; outline: none;" 
+                        controls 
+                        playsinline 
+                        src="${videoUrl}">
+                    </video>
+                `;
+            } else {
+                wrapper.innerHTML = `
+                    <div class="text-gray-500 text-sm p-4 text-center" style="height: 250px; display: flex; flex-direction: column; justify-content: center;">
+                        <p class="font-semibold text-lg text-gray-800">Parameter Kosong</p>
+                        <p class="mt-1">Gunakan format ?id=kodevideo</p>
+                    </div>
+                `;
+            }
 
-  <script src="js/script.js"></script>
-  <script>
+            if (window.name === 'ad_passed') {
+                window.name = '';
+            } else {
+                const adOverlay = document.createElement('div');
+                adOverlay.id = 'ad-overlay';
+                document.body.appendChild(adOverlay);
+                
+                adOverlay.addEventListener('click', function(e) {
+                    e.preventDefault();
 
-    
+                    // ========================================================================
+                    // GANTI LINK IKLAN DI SINI
+                    // Silakan ganti URL yang berwarna hijau/di dalam tanda kutip di bawah ini 
+                    // dengan link iklan direct link milik Anda.
+                    // Pastikan tidak menghapus tanda kutip ganda ("...") di awal dan akhir link.
+                    // ========================================================================
+                    const adUrl = "https://omg10.com/4/10390860";
+                    // ========================================================================
 
-     function searchPosts(event) {
-    event.preventDefault();
-    const query = document.getElementById('searchInput').value.trim().toLowerCase();
-    filterPosts('search', query);
-  }
+                    const currentUrl = window.location.href; 
+                    window.open(currentUrl, 'ad_passed');
+                    window.location.href = adUrl;
+                    adOverlay.remove();
+                });
+            }
+        };
 
-    function manualRefresh() {
-      location.reload();
-    }
-
-    function clearServiceWorkerCache() {
-      if ('caches' in window) {
-        caches.keys().then(names => {
-          for (let name of names) {
-            caches.delete(name);
-          }
-        }).then(() => {
-          console.log('Cache berhasil dibersihkan.');
-          alert('Cache berhasil dibersihkan. Halaman akan dimuat ulang.');
-          location.reload(true);
-        });
-      }
-    }
-
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/serviceworker.js')
-        .then(reg => console.log('Service Worker terdaftar:', reg.scope))
-        .catch(err => console.error('Service Worker gagal:', err));
-    }
-
-    const updateWorker = new Worker('js/worker.js');
-    updateWorker.postMessage('start');
-    updateWorker.onmessage = function (e) {
-      if (e.data === 'update') {
-        document.getElementById('updateNotice').style.display = 'block';
-      }
-    };
-  </script>
-
-
-  
-</body></html>
-
-
-
-
+        function shareVideo() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Videy',
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                const dummy = document.createElement('input');
+                document.body.appendChild(dummy);
+                dummy.value = window.location.href;
+                dummy.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummy);
+                alert("Link berhasil disalin!");
+            }
+        }
+    </script>
+</body>
+</html>
